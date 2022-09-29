@@ -1,6 +1,7 @@
+import React, { useEffect } from "react";
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { useEffect } from "react";
+import { wrapper } from "../redux/store";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -9,4 +10,4 @@ function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
