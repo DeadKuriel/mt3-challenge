@@ -1,7 +1,6 @@
 import * as t from "../types";
 
 const notesState = (state = {}, action) => {
-  // console.log("reducter", action);
   switch (action.type) {
     case t.SET_NEWNOTE:
       console.log("setnewnotte", action.payload);
