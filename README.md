@@ -1,5 +1,5 @@
 # Kur-Dashboard
-
+------
 #NPM Install
 This command installs a package, and any packages that it depends on. If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that, with an npm-shrinkwrap.json taking precedence if both files exist. See package-lock.json and npm shrinkwrap.
 A package is:
@@ -25,7 +25,8 @@ That command will start a development server so that you can open the Next.js ap
 As to how the next dev command works, you need to look into the source code inside the node_modules/ folder. But that is beyond the scope of this --
 In short, the npm run command is part of the npm program used to run scripts. The name of the scripts themselves is user-defined inside the package.json file.
 This means that npm run dev will run the dev command, while npm run production will run the production command.
-#How to Install Node.js and NPM on mac
+------
+##### How to Install Node.js and NPM on mac
 How to Install Node.js on a Mac
 Node.js is required for using many JavaScript tools and for creating server-side JavaScript applications. Here is how you install Node.js on a Mac.
 The first thing you should do is check to see if you have a version of Node.js already installed. To do that:
