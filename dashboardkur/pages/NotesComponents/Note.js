@@ -7,8 +7,13 @@ function Note({ priority, text, numberOfNewNote }) {
     <Dragabble>
       <div style={{ position: "absolute", left: "220px", top: "100px" }}>
         <div className={styles.note}>
-          <div>Prioridad : {priority}</div>
-          <div>{text}</div>
+          <div style={{ display: "flex", flex:1 }}>
+            <div style={{ flex: 4 }}>Prioridad : {priority}</div>
+            <div style={{ flex: 1 }}>#{numberOfNewNote}</div>
+          </div>
+          <div>
+            <div style={{ marginTop: 15 }}>{text}</div>
+          </div>
         </div>
       </div>
     </Dragabble>
