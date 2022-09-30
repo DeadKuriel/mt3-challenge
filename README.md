@@ -1,15 +1,15 @@
 # Kur-Dashboard
 ------
-#### NPM Install
+#### npm Install
 This command installs a package, and any packages that it depends on. If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that, with an npm-shrinkwrap.json taking precedence if both files exist. See package-lock.json and npm shrinkwrap.
 A package is:
-• a) a folder containing a program described by a package.json file
-• b) a gzipped tarball containing (a)
-• c) a url that resolves to (b)
-• d) a <name>@<version> that is published on the registry (see registry) with (c)
-• e) a <name>@<tag> (see npm dist-tag) that points to (d)
-• f) a <name> that has a "latest" tag satisfying (e)
-• g) a <git remote url> that resolves to (a)
+    •	a) a folder containing a program described by a package.json file
+    •	b) a gzipped tarball containing (a)
+    •	c) a url that resolves to (b)
+    •	d) a <name>@<version> that is published on the registry (see registry) with (c)
+    •	e) a <name>@<tag> (see npm dist-tag) that points to (d)
+    •	f) a <name> that has a "latest" tag satisfying (e)
+    •	g) a <git remote url> that resolves to (a)
 
     •	npm install (in package directory, no arguments):
     •	Install the dependencies in the local node_modules folder.
@@ -20,14 +20,13 @@ A package is:
 The npm run dev command is a generic npm command that you can find in many modern web application projects.
 This command is used to run the dev script defined in the project’s package.json file.
 To know what is exactly being run by the command, in first place you need to open the package.json file.
-
 That command will start a development server so that you can open the Next.js application from your browser.
 As to how the next dev command works, you need to look into the source code inside the node_modules/ folder. But that is beyond the scope of this --
 In short, the npm run command is part of the npm program used to run scripts. The name of the scripts themselves is user-defined inside the package.json file.
 This means that npm run dev will run the dev command, while npm run production will run the production command.
 ------
 ##### How to Install Node.js and NPM on mac
-How to Install Node.js on a Mac
+### How to Install Node.js on a Mac
 Node.js is required for using many JavaScript tools and for creating server-side JavaScript applications. Here is how you install Node.js on a Mac.
 The first thing you should do is check to see if you have a version of Node.js already installed. To do that:
 • Open the Terminal by pressing Command+Space to open Spotlight Search and entering Terminal then pressing Enter.
@@ -45,13 +44,14 @@ sudo npm i -g npm
 • Enter node - v in the Terminal to verify that Node.js is installed correctly and to see the version of Node.js that was installed:
 • Nats-MacBook-Pro:Webucator natdunn % node -v
 v16.15.0
-Installing Node.j will also install npm. To see this, run npm -v:
+### Installing Node.j will also install npm. To see this, run npm -v:
 Nats-MacBook-Pro:Webucator natdunn % npm -v
 8.6.0
 If versions for node and npm were both output, then you’re all set.
-#react
+------
+#### react
 React JS -React is an open-source component-based front-end JavaScript library. It is used to create fast and interactive user interfaces for web and mobile applications. It is easy to create a dynamic application in React because it requires less coding and offer more functionality. It is used by big MNC and fresh new startups
-#Features of React:
+### Features of React:
 Reusable Components: A single React app consists of many components each component have their own logic and code  but we can easily reuse components any number of time hence reducing the developers time and increasing the efficiency of work
 Debugging: React app can be easily debug using  “react developer tools”.It’s a browser extension that can be used for both chrome as well as Firefox.
 Step 1: Install Node.js installer for MAC. Here install the LTS version (the one present on the left). Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed.  
@@ -67,11 +67,12 @@ Note: The newfolder in the above command is the name of the folder and can be
 Step 5: Now inside this folder run the command –>
 create-react-app react kur dashboard
 Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newolder (in the above example) inside the folder you will see your app’s name reactapp (kur dashboard). Use the terminal and move inside your app name folder.  
-Use command  cd react app (kur dashboard)
+Use command  cd react app kurdashboard
 Step 7: To start your app run the below command :
-#npm start  
-Once you run the above command a new tab will open in your browser showing React logo as shown below :
-#nextjs
+### npm start  
+Once you run the above command a new tab will open in your browser showing React logo.
+------
+#### nextjs
 The combination of React.js and the Create-react-app tool is the best for creating any web application. But when coming to production-ready web applications, it will give us a painful experience. Here, we have a framework built on top of the React.js library that helps us to build production-ready web apps.
 #1. Install Nodejs
 How to install Next.js
@@ -110,7 +111,7 @@ withnode_modulesfolder.
 Use your favorite editor to open the project folder. My favorite editor isVS code. If it is installed, you can runcode .Open the current folder in the editor in the terminal (if this command does not work for you, please refer toThis)
 turn onpackage.json, Now has the following content:
 {
-"name": "airbnbclone",
+"name": "kurdashboard",
 "version": "1.0.0",
 "description": "",
 "main": "index.js",
@@ -146,8 +147,9 @@ const Index = () => (
 export default Index
 Now use the terminal and runnpm run devStart the Next development server.
 This will make the application available on port 3000 on the local host.
-turn onhttp://localhost:3000View it in the browser.
-#redux 
+turn on http://localhost:3000 View it in the browser.
+-----
+#### redux 
 Before installing Redux, we have to install Nodejs and NPM. Below are the instructions that will help you install it. You can skip these steps if you already have Nodejs and NPM installed in your device.
 	•	Visit https://nodejs.org/ and install the package file.
 	•	Run the installer, follow the instructions and accept the license agreement.
@@ -163,7 +165,8 @@ To install developer tools for Redux, you need to install the following as depen
 Run the below command in your command prompt to install Redux dev-tools.
 npm install --save-dev redux-devtools
 If you do not want to install Redux dev tools and integrate it into your project, you can install Redux DevTools Extension for Chrome and Firefox.
-#Bootstrap
+-----
+#### Bootstrap
 Bootstrap is one of the most popular front-end open-source toolkit for developing responsive, mobile-first front-end projects on the web. It contains various types of design templates based on CSS and JavaScript. It has various prebuilt components such as Accordion, Alerts, Carousel, Button, Card, Breadcrumb, etc. Instead of writing code from scratch, one can use bootstrap templates to make the work a lot easier. There are multiple ways to use Bootstrap in your local project such as by using Bootstrap CDN or installing bootstrap in React JS.
 Following are some steps to install Bootstrap:-
 Create React App
@@ -176,6 +179,6 @@ npx create-react-app gfg
 Step 2: Change directory to the project folder by entering the following command.
 cd gfg
 Project Structure: Now we are in our project directory. As we created the ReactJS successfully so let’s install the required package. After creating React app our project structure would look similar to the following.
-#Project_Structure
+Project_Structure
 Step 3: Run the following command in the terminal. Do check whether you are in React App directory or not. For the sake of convenience I have taken F:\gfg  as my current working directory, the directory of my React App(ku dashboard). 
 npm install bootstrap
