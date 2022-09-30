@@ -1,6 +1,6 @@
 # Kur-Dashboard
 ------
-#NPM Install
+#### NPM Install
 This command installs a package, and any packages that it depends on. If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that, with an npm-shrinkwrap.json taking precedence if both files exist. See package-lock.json and npm shrinkwrap.
 A package is:
 • a) a folder containing a program described by a package.json file
@@ -15,8 +15,8 @@ A package is:
     •	Install the dependencies in the local node_modules folder.
     •	In global mode (ie, with -g or --global appended to the command), it installs the current package context (ie, the current working directory) as a global package.
     •	By default, npm install will install all modules listed as dependencies in package.json.
-
-#npm run dev
+------
+#### npm run dev
 The npm run dev command is a generic npm command that you can find in many modern web application projects.
 This command is used to run the dev script defined in the project’s package.json file.
 To know what is exactly being run by the command, in first place you need to open the package.json file.
