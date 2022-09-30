@@ -1,12 +1,9 @@
 .container {
-  /* background-color: #43ED3F; */
   opacity: 1;
-  /* margin: 1.2rem; */
 }
 
 .main {
   min-height: 75vh;
-  /* padding: 4rem 0; */
   margin: 1.5rem;
   flex: 1;
   display: flex;
@@ -109,8 +106,6 @@
 }
 
 .initialcard {
-  /* margin: 1rem; */
-  /* padding: 1.5rem; */
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -131,6 +126,27 @@
   color: #0070f3;
   border-color: #0070f3;
 }
+.note {
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #43ed3f;
+  background-color: rgba(67, 237, 63, 0.1);
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 10;
+  top: 10;
+}
+
+.note:hover,
+.note:focus,
+.note:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
 
 .floatingform {
   position: absolute;
@@ -141,9 +157,8 @@
   left: 0;
   width: 300px;
   height: 300px;
-  background-color: rgba(67, 237, 63, 0.5);
+  background-color: rgba(67, 237, 63, 1);
   border: 2px solid #43ed3f;
-  /* align-content: center; */
   align-items: center;
 }
 

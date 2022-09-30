@@ -1,14 +1,17 @@
 import { React } from "react";
 import styles from "../../styles/Home.module.css";
+import { connect } from "react-redux";
+import { changeStatusForm } from "../../redux/actions/main";
 
-function InitialNote() {
+function InitialNote(props) {
+  const { changeStatusForm } = props;
   return (
     <div style={{ position: "absolute", left: "40px", top: "100px" }}>
       <button
         type="button"
         className={styles.initialcard}
         onClick={() => {
-          setIsFormVisible(true);
+          changeStatusForm(true);
         }}
       >
         <svg
@@ -26,4 +29,14 @@ function InitialNote() {
   );
 }
 
-export default InitialNote;
+const mapStateToProps = (state) => {
+  return {
+    statusForm: state.main.formVisible,
+  };
+};
+
+const mapDispatchToProps = {
+  changeStatusForm,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(InitialNote);

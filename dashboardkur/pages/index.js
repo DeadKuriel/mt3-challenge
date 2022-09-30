@@ -1,20 +1,16 @@
 import { useState } from "react";
 import { connect } from "react-redux";
-import { setInfo } from "../redux/actions/main";
+import { setInfo, changeStatusForm } from "../redux/actions/main";
 import { setNewNote } from "../redux/actions/notesActions";
 import Head from "next/head";
 
-import { Note, InitialNote, NotesContainer } from "./NotesComponents";
+import { Note, InitialNote } from "./NotesComponents";
 import styles from "../styles/Home.module.css";
-import Dragabble from "react-draggable";
 
 function Home(props) {
-  const { name, notesState, setInfo, setNewNote } = props;
-  const [newName, setName] = useState("");
-  const [isFormVisible, setIsFormVisible] = useState(false);
-  const [notes, setNotes] = useState([
-    { priority: 0, text: "", id: 0, status: "" },
-  ]);
+  const { statusForm, notesState, changeStatusForm, setNewNote } = props;
+  const [selectedValue, setSelectedValue] = useState("");
+  const [textValue, setTextValue] = useState("");
   const numberOfNotes = Object.keys(notesState).length;
   const lastNote = numberOfNotes - 1;
   const numberOfNewNote = lastNote + 1;
@@ -44,23 +40,17 @@ function Home(props) {
 
       <main className={styles.main}>
         <InitialNote />
-        <div>{name}</div>
-        <button
-          onClick={() => {
-            setInfo("PRUEBA");
-          }}
-        >
-          button
-        </button>
-        <button
-          onClick={() => {
-            setNewNote({ priority: "2", text: "text", numberOfNewNote });
-          }}
-        >
-          Note
-        </button>
+        {Object.values(notesState).map((route, i) => {
+          return (
+            <Note
+              priority={route?.priority}
+              text={route?.text}
+              numberOfNewNote={route?.numberOfNewNote}
+            />
+          );
+        })}
 
-        {isFormVisible && (
+        {statusForm && (
           <div className={styles.floatingform}>
             <h1>New pending</h1>
             <form>
@@ -68,6 +58,8 @@ function Home(props) {
                 <select
                   class="form-select"
                   arial-label="Defailt select example"
+                  value={selectedValue}
+                  onChange={(e) => setSelectedValue(e.target.value)}
                 >
                   <option selected>Priority</option>
                   <option value="1">One</option>
@@ -81,12 +73,20 @@ function Home(props) {
                   class="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
+                  value={textValue}
+                  onChange={(t) => setTextValue(t.target.value)}
                 ></textarea>
               </div>
               <button
                 onClick={() => {
-                  console.log("pressed");
-                  setInfo("PRUEBA");
+                  changeStatusForm(false);
+                  setNewNote({
+                    priority: selectedValue,
+                    text: textValue,
+                    numberOfNewNote,
+                  });
+                  setSelectedValue("");
+                  setTextValue("");
                 }}
                 type="submit"
                 class="btn btn-primary"
@@ -114,12 +114,14 @@ function Home(props) {
 const mapStateToProps = (state) => {
   return {
     name: state.main.name,
+    statusForm: state.main.formVisible,
     notesState: state.notesState,
   };
 };
 
 const mapDispatchToProps = {
   setInfo,
+  changeStatusForm,
   setNewNote,
 };
 
